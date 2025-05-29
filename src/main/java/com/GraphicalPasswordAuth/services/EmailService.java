@@ -25,7 +25,7 @@ public class EmailService {
         message.setTo(toEmail);
         message.setSubject("Password Reset - Graphical Auth App");
         message.setText("Click the link below to reset your password:\n\n" + resetLink + "\n\nThis link expires in 30 minutes.");
-        message.setFrom("divyagadekar1306@gmail.com");  // Tip: consider externalizing this in application.properties
+        message.setFrom("abc@gmail.com");  // Tip: consider externalizing this in application.properties
         mailSender.send(message);
     }
 }
