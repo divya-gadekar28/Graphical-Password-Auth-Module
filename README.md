@@ -38,10 +38,10 @@ A Java Spring Boot-based web application implementing graphical password authent
 ### 🔧Configure Database
 
 #### Update src/main/resources/application.properties:
-spring.datasource.url=jdbc:mysql://localhost:3306/your_db_name
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
+- spring.datasource.url=jdbc:mysql://localhost:3306/your_db_name
+- spring.datasource.username=your_username
+- spring.datasource.password=your_password
+- spring.jpa.hibernate.ddl-auto=update
 
 ### ▶️ Run the App
 - mvn spring-boot:run
