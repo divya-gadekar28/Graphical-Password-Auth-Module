@@ -10,29 +10,6 @@ A Java Spring Boot-based web application implementing graphical password authent
 - 📄 Javadoc generated for code documentation
 - 📦 Built using Spring Boot, JPA, and Maven
 
-## 📁 Project Structure
-GraphicalPasswordAuth
-│
-├── src/
-│ └── main/
-│ └── java/
-│ └── com/
-│ └── GraphicalPasswordAuth/
-│ ├── controller/
-│ ├── services/
-│ ├── repository/
-│ ├── model/
-│ └── GraphicalPasswordAuthApplication.java
-│
-├── resources/
-│ ├── static/
-│ ├── templates/
-│ └── application.properties
-│
-├── doc/ # Generated Javadoc
-├── pom.xml # Maven configuration
-└── README.md
-
 
 ## 🛠️ Technologies Used
 
@@ -54,36 +31,34 @@ GraphicalPasswordAuth
 
 ### Clone & Build
 
-```bash
-git clone https://github.com/divya-gadekar28/Graphical-Password-Auth-Module.git
-cd Graphical-Password-Auth-Module
-mvn clean install
+- git clone https://github.com/divya-gadekar28/Graphical-Password-Auth-Module.git
+- cd Graphical-Password-Auth-Module
+- mvn clean install
 
-###Configure Database
+### 🔧Configure Database
 
-Update src/main/resources/application.properties:
+#### Update src/main/resources/application.properties:
 spring.datasource.url=jdbc:mysql://localhost:3306/your_db_name
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update
 
-###Run the App
-mvn spring-boot:run
-Navigate to http://localhost:8080 in your browser.
+### ▶️ Run the App
+- mvn spring-boot:run
+- Navigate to http://localhost:8080 in your browser.
 
-###🧪 Running Tests
+### 🧪 Running Tests
 mvn test
 
-###📚 Generate Javadoc
-mvn javadoc:javadoc
-Docs will be available in target/site/apidocs/ or your configured directory.
+### 📚 Generate Javadoc
+- mvn javadoc:javadoc
+- Docs will be available in target/site/apidocs/ or your configured directory.
 
-🌐 Hosting
-Frontend/static content can be hosted via GitHub Pages.
+### 🌐 Hosting
+- Frontend/static content can be hosted via GitHub Pages.
+- Backend can be deployed to platforms like Heroku, Render, or AWS Elastic Beanstalk.
 
-Backend can be deployed to platforms like Heroku, Render, or AWS Elastic Beanstalk.
-
-📬 Contact
+### 📬 Contact
 Made with ❤️ by Divya Gadekar
 
 
