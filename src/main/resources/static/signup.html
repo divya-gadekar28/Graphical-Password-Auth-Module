@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emoji Login Page</title>
+
+  <link rel="stylesheet" href="/css/signup.css" />
+  <script src="https://kit.fontawesome.com/53b89dd49e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container" id="container">
+    <!-- Sign Up Section -->
+    <div class="form-container sign-up-container">
+      <form id="signup-form">
+        <h1>Create Account</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or use your email for registration</span>
+        <input type="text" placeholder="Name" id="name" required />
+        <input type="email" placeholder="Email" id="upmail" required />
+        <div id="signup-icons" class="icon-grid"></div>
+        <div id="signup-preview" class="emoji-preview"></div>
+        
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+
+    <!-- Sign In Section -->
+    <div class="form-container sign-in-container">
+      <form id="signin-form">
+        <h1>Sign in</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or use your account</span>
+        <input type="email" placeholder="Email" id="inmail" required />
+        <div id="signin-icons" class="icon-grid"></div>
+        <a href="resetPassword.html">Forgot your password?</a>
+<div id="signin-preview" class="emoji-preview"></div>
+
+        <button type="submit">Sign In</button>
+      </form>
+    </div>
+
+    <!-- Overlay Section -->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Hi👋, there!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <button onclick="window.location.href='index.html'" style="padding: 10px 20px; font-size: 16px;">Back to Home</button>
+  </div>
+
+  <!-- EmailJS (if used elsewhere) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("epVHGFQIo-D_O1Zqw");
+    })();
+  </script>
+
+  <!-- Your JavaScript -->
+  <script src="/js/signup.js"></script>
+
+  <script>
+    // Add event listeners for form submissions to call signup/signin functions from script.js
+
+    document.getElementById('signup-form').addEventListener('submit', signup);
+    document.getElementById('signin-form').addEventListener('submit', signin);
+  </script>
+</body>
+</html>

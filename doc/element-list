@@ -1,0 +1,6 @@
+com.GraphicalPasswordAuth
+com.GraphicalPasswordAuth.controller
+com.GraphicalPasswordAuth.model
+com.GraphicalPasswordAuth.repository
+com.GraphicalPasswordAuth.services
+com.main.GraphicalPasswordAuth

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Emoji Selector (Codepoint-based)</title>
+  <style>
+    .emoji-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 50px);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .emoji {
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .emoji.selected {
+      border-color: #007bff;
+      background-color: #e0f0ff;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Select Emojis</h2>
+
+<div class="emoji-grid" id="emojiGrid"></div>
+
+<button onclick="submitPassword()">Submit</button>
+<p>Selected Codepoints: <span id="output"></span></p>
+
+<script>
+  // Array of emoji Unicode code points
+  const emojiCodes = [0x1F600, 0x1F601, 0x1F602, 0x1F603, 0x1F604, 0x1F605, 0x1F609, 0x1F60A, 0x1F60D, 0x1F618];
+  const selected = [];
+
+  const emojiGrid = document.getElementById("emojiGrid");
+
+  emojiCodes.forEach(code => {
+    const emojiChar = String.fromCodePoint(code);
+    const span = document.createElement("span");
+    span.className = "emoji";
+    span.textContent = emojiChar;
+    span.dataset.code = code;
+    span.onclick = () => toggleEmoji(span, code);
+    emojiGrid.appendChild(span);
+  });
+
+  function toggleEmoji(span, code) {
+    const idx = selected.indexOf(code);
+    if (idx > -1) {
+      selected.splice(idx, 1);
+      span.classList.remove("selected");
+    } else {
+      selected.push(code);
+      span.classList.add("selected");
+    }
+  }
+
+  function submitPassword() {
+    document.getElementById("output").textContent = selected.map(c => "U+" + c.toString(16).toUpperCase());
+    // You can now send `selected` array to backend
+  }
+</script>
+
+</body>
+</html>
